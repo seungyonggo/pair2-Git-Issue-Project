@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 const OneItem = ({ item }) => {
 	const { number, title, updated_at, user } = item
 	console.log(item)
@@ -12,7 +11,6 @@ const OneItem = ({ item }) => {
 			<S.User>{user.login}</S.User>
 		</S.Wrapper>
 	)
-
 }
 export default OneItem
 
@@ -42,5 +40,4 @@ const S = {
 	Title,
 	UpdatedAt,
 	User,
-
 }
