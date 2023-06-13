@@ -1,20 +1,17 @@
 import OneItem from './OneItem'
 import styled from 'styled-components'
-const ItemList = () => {
+
+
+const ItemList = ({ data }) => {
+	console.log(data)
+
 	return (
 		<S.Wrapper>
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
-			<OneItem />
+			{data.map(item => {
+				return <OneItem key={Math.floor(Math.random() * 1000000)} item={item} />
+			})}
 		</S.Wrapper>
-	)
+	) // number , title, update_at, user.login,
 }
 
 export default ItemList

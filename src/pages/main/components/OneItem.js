@@ -1,7 +1,18 @@
 import styled from 'styled-components'
 
-const OneItem = () => {
-	return <S.Wrapper>이슈 들어가는 곳</S.Wrapper>
+
+const OneItem = ({ item }) => {
+	const { number, title, updated_at, user } = item
+	console.log(item)
+	return (
+		<S.Wrapper>
+			<S.Number>{'#' + number}</S.Number>
+			<S.Title>{title}</S.Title>
+			<S.UpdatedAt>{updated_at}</S.UpdatedAt>
+			<S.User>{user.login}</S.User>
+		</S.Wrapper>
+	)
+
 }
 export default OneItem
 
@@ -20,6 +31,16 @@ const Wrapper = styled.div`
 	}
 `
 
+const Number = styled.div``
+const Title = styled.div``
+const UpdatedAt = styled.div``
+const User = styled.div``
+
 const S = {
 	Wrapper,
+	Number,
+	Title,
+	UpdatedAt,
+	User,
+
 }
