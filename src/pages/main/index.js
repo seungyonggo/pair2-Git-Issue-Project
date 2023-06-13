@@ -19,8 +19,8 @@ const MainPage = () => {
 	}
 
 	useEffect(() => {
-		useMainApi()
-	}, [])
+		dispatch(getIssue())
+	}, [getIssue])
 	return !isLoading && data && <ItemList data={data}></ItemList>
 }
 export default MainPage
