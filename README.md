@@ -6,6 +6,7 @@
 -husky
 -styled-components
 
+<<<<<<< HEAD
 ## Available Scripts
 
 In the project directory, you can run:
@@ -72,3 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+..
+=======
+진행 과정
+(6/13) 생성 및 셋팅, ui
+>>>>>>> 96ccd3c4b1ce468dc2ad4f8ad96fddb05655f352

@@ -1,9 +1,12 @@
 import styled from 'styled-components'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const OneItem = () => {
 	return <S.Wrapper>이슈 들어가는 곳</S.Wrapper>
 =======
+=======
+>>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
 const OneItem = ({ item }) => {
 	const { number, title, updated_at, user } = item
 	console.log(item)
@@ -15,6 +18,9 @@ const OneItem = ({ item }) => {
 			<S.User>{user.login}</S.User>
 		</S.Wrapper>
 	)
+<<<<<<< HEAD
+>>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
+=======
 >>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
 }
 export default OneItem
@@ -34,10 +40,13 @@ const Wrapper = styled.div`
 	}
 `
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const S = {
 	Wrapper,
 =======
+=======
+>>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
 const Number = styled.div``
 const Title = styled.div``
 const UpdatedAt = styled.div``
@@ -49,5 +58,8 @@ const S = {
 	Title,
 	UpdatedAt,
 	User,
+<<<<<<< HEAD
+>>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
+=======
 >>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
 }

@@ -1,6 +1,7 @@
 import OneItem from './OneItem'
 import styled from 'styled-components'
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ItemList = () => {
 	return (
 		<S.Wrapper>
@@ -17,6 +18,8 @@ const ItemList = () => {
 		</S.Wrapper>
 	)
 =======
+=======
+>>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
 const ItemList = ({ data }) => {
 	console.log(data)
 
@@ -42,6 +45,9 @@ const ItemList = ({ data }) => {
 	// 		<OneItem />
 	// 	</S.Wrapper>
 	// )
+<<<<<<< HEAD
+>>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
+=======
 >>>>>>> ba6c96a881a295c75049cd793c481cff6154bb82
 }
 
