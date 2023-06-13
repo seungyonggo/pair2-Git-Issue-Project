@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-
+import { issueSlice } from './issue'
 export const rootReducer = combineReducers({
-	data: dataSlice.reducer,
+	issue: issueSlice.reducer,
 })
