@@ -45,13 +45,17 @@ export const issueSlice = createSlice({
 //1. issue/getIssue/pending
 //2.issue/getIssue/..
 //3.issue/getIssue/...
-export const getIssue = createAsyncThunk('issue/getIssue', async () => {
-	try {
-		const res = await mainApi.getApi()
-		console.log('getApi', res.data)
-		return res.data
-	} catch (err) {
-		console.log(err)
-		return err
-	}
-})
+export const getIssue = createAsyncThunk(
+	'issue/getIssue',
+	async (page, issue) => {
+		try {
+			const res = await mainApi.getApi(page, issue)
+			console.log('getApi', res.data)
+			console.log('res', res)
+			return res.data
+		} catch (err) {
+			console.log(err)
+			return err
+		}
+	},
+)
