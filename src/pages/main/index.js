@@ -5,11 +5,13 @@ import { getIssue } from '../../reducer/issue'
 const MainPage = () => {
 	const dispatch = useDispatch()
 	const [isLoading, setIsLoading] = useState(true)
+	const [limit, setLimit] = useState(10)
+	const [page, setPage] = useState(1)
 
 	useEffect(() => {
-		dispatch(getIssue())
+		dispatch(getIssue(page, limit))
 	}, [])
 
-	return !isLoading && <ItemList></ItemList>
+	return !isLoading && <ItemList />
 }
 export default MainPage
