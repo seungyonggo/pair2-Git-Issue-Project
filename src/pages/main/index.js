@@ -14,16 +14,31 @@ const MainPage = () => {
 	const res = useSelector(state => state.issue.issue)
 	console.log('index Main', res)
 
+	const pageCount = () => {
+		return Math.ceil(res.length / limit)
+	}
+
+	const handleLimitChange = event => {
+		const newLimit = parseInt(event.target.value, 10)
+		setLimit(newLimit)
+	}
+
 	useEffect(() => {
 		dispatch(getIssue({ page: page || 1, limit })) // page가 정의되지 않은 경우 기본값 1 사용
 	}, [page, limit, dispatch])
 
 	return (
 		<>
-			<ItemList data={res} />
+			{<ItemList data={res} />}
+			<select value={limit} onChange={handleLimitChange}>
+				<option value={10}>10</option>
+				<option value={20}>20</option>
+				<option value={30}>30</option>
+			</select>
+			{/* Inside the return statement of MainPage component */};
 			{/* {res.map(item => (
-				<ItemList data={item} />
-			))} */}
+			<ItemList data={item} />
+		))} */}
 			<Pagination limit={limit} pages={10} />
 		</>
 	)
