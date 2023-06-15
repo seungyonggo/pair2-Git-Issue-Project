@@ -3,23 +3,42 @@ import { useParams, useNavigate } from 'react-router-dom'
 const Pagination = ({ pages, limit }) => {
 	const pageNumbers = Array.from({ length: pages }, (_, i) => i + 1) // Example: for pages=5, [1, 2, 3, 4, 5]
 	const navigate = useNavigate()
-	const { page } = useParams()
+	const { page: currentPage = '1' } = useParams()
 
 	const handlePageChange = page => {
-		// page번호를 useParams로 받아와서 그걸 navigate 인자로 받아온다
 		navigate(`/page/${page}`)
 	}
-	// const useNavigate = (page) =>{
-	//   navigator()
-	// }
 
+	const onPreviousPage = () => {
+		// 이전 페이지버튼
+		if (currentPage > 1) {
+			navigate(`/page/${parseInt(currentPage) - 1}`)
+		}
+	}
+
+	const onNextPage = () => {
+		if (currentPage < pages) {
+			// 다음 페이지 버튼
+			navigate(`/page/${parseInt(currentPage) + 1}`)
+		}
+	}
+
+	const onMaxNext = () => {
+		if (currentPage < pages) {
+			// 맨끝 페이지 버튼
+			navigate(`/page/${pages.length}`)
+		}
+	}
 	return (
 		<div>
+			<button onClick={onPreviousPage}>{'<'}</button>
 			{pageNumbers.map(page => (
 				<button key={page} onClick={() => handlePageChange(page)}>
 					{page}
 				</button>
 			))}
+			<button onClick={onNextPage}>{'>'}</button>
+			<button onClick={onMaxNext}>{'>>'}</button>
 		</div>
 	)
 }

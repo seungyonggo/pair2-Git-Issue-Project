@@ -4,6 +4,7 @@ import { getIssue } from '../../reducer/issue'
 import Pagination from './components/Pagination'
 import { useParams } from 'react-router-dom'
 import ItemList from './components/ItemList'
+import styled from 'styled-components'
 
 const MainPage = () => {
 	const dispatch = useDispatch()
@@ -34,25 +35,52 @@ const MainPage = () => {
 	return (
 		<>
 			<ItemList data={res} />
-			<select value={limit} onChange={handleLimitChange}>
-				<option value={10}>10개</option>
-				<option value={20}>20개</option>
-				<option value={30}>30개</option>
-			</select>
-			{limit === 10 && (
-				<Pagination limit={limit} pages={10} onClick={handlePageClick} />
-			)}
-			{limit === 20 && (
-				<Pagination limit={limit} pages={10} onClick={handlePageClick} />
-			)}
-			{limit === 30 && (
-				<Pagination limit={limit} pages={8} onClick={handlePageClick} />
-			)}
+			<S.wrapper>
+				<S.optionWrapper>
+					<S.pageSelect value={limit} onChange={handleLimitChange}>
+						<option value={10}>10개</option>
+						<option value={20}>20개</option>
+						<option value={30}>30개</option>
+					</S.pageSelect>
+					{limit === 10 && (
+						<Pagination limit={limit} pages={10} onClick={handlePageClick} />
+					)}
+					{limit === 20 && (
+						<Pagination limit={limit} pages={10} onClick={handlePageClick} />
+					)}
+					{limit === 30 && (
+						<Pagination limit={limit} pages={8} onClick={handlePageClick} />
+					)}
+				</S.optionWrapper>
+			</S.wrapper>
 		</>
 	)
 }
 
 export default MainPage
+
+const wrapper = styled.div`
+	display: flex;
+
+	width: 100%;
+	position: fixed;
+	justify-content: center;
+	bottom: 20px;
+`
+
+const optionWrapper = styled.div`
+	display: flex;
+`
+
+const pageSelect = styled.select`
+	margin-right: 10px;
+`
+
+const S = {
+	wrapper,
+	optionWrapper,
+	pageSelect,
+}
 // import { useEffect, useState } from 'react'
 // import ItemList from './components/ItemList'
 // import { useDispatch, useSelector } from 'react-redux'
