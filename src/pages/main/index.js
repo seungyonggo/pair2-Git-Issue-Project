@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import ItemList from './components/ItemList'
 import { useDispatch, useSelector } from 'react-redux'
 import { getIssue } from '../../reducer/issue'
 import Pagination from './components/Pagination'
 import { useParams } from 'react-router-dom' // 추가
+import ItemList from './components/ItemList'
 
 const MainPage = () => {
 	const dispatch = useDispatch()
@@ -11,16 +11,20 @@ const MainPage = () => {
 	const [limit, setLimit] = useState(10)
 	const { page } = useParams() // 추가
 
-	const issue = useSelector(state => state.issue.issue)
+	const res = useSelector(state => state.issue.issue)
+	console.log('index Main', res)
 
 	useEffect(() => {
-		dispatch(getIssue(page || 1, limit)) // page가 정의되지 않은 경우 기본값 1 사용
+		dispatch(getIssue({ page: page || 1, limit })) // page가 정의되지 않은 경우 기본값 1 사용
 	}, [page, limit, dispatch])
 
 	return (
 		<>
-			{!isLoading && <ItemList />}
-			<Pagination limit={limit} pages={10} data={issue} />
+			<ItemList data={res} />
+			{/* {res.map(item => (
+				<ItemList data={item} />
+			))} */}
+			<Pagination limit={limit} pages={10} />
 		</>
 	)
 }

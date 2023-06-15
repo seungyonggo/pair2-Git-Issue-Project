@@ -25,11 +25,11 @@ export const issueSlice = createSlice({
 			state.getIssueState.err = null
 		})
 		builder.addCase(getIssue.fulfilled, (state, action) => {
+			state.issue = action.payload //데이터 담음
 			state.getIssueState.loading = false
 			state.getIssueState.done = true
 			state.getIssueState.err = null
 			//성공을 했을 때 => issue데이터가 잘 들어옴 => issue데이터를 넣어줘야함 => usestate x
-			state.issue = action.payload //데이터 담음
 		})
 		builder.addCase(getIssue.rejected, (state, action) => {
 			state.getIssueState.loading = false

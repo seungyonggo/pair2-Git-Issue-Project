@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-const OneItem = ({ item }) => {
-	const { number, title, updated_at, user } = item
-	console.log(item)
+const OneItem = ({ data }) => {
+	const { number, title, updated_at, user } = data
+	console.log('oneitem', data)
 	return (
 		<S.Wrapper>
 			<S.Number>{'#' + number}</S.Number>
