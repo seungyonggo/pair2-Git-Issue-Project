@@ -2,21 +2,17 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getIssue } from '../../reducer/issue'
 import Pagination from './components/Pagination'
-import { useParams } from 'react-router-dom' // 추가
+import { useParams } from 'react-router-dom'
 import ItemList from './components/ItemList'
 
 const MainPage = () => {
 	const dispatch = useDispatch()
 	const [isLoading, setIsLoading] = useState(true)
 	const [limit, setLimit] = useState(10)
-	const { page } = useParams() // 추가
+	const { page } = useParams()
 
 	const res = useSelector(state => state.issue.issue)
 	console.log('index Main', res)
-
-	const pageCount = () => {
-		return Math.ceil(res.length / limit)
-	}
 
 	const handleLimitChange = event => {
 		const newLimit = parseInt(event.target.value, 10)
@@ -24,25 +20,38 @@ const MainPage = () => {
 	}
 
 	useEffect(() => {
-		dispatch(getIssue({ page: page || 1, limit })) // page가 정의되지 않은 경우 기본값 1 사용
+		dispatch(getIssue({ page: page || 1, limit }))
 	}, [page, limit, dispatch])
+
+	const totalItems = res.length // Calculate the total number of items based on the length of 'res'
+	const totalPages = Math.ceil(totalItems / limit)
+	const visiblePages = totalPages > 1 ? Math.min(totalPages, 8) : 1
+
+	const handlePageClick = page => {
+		dispatch(getIssue({ page, limit }))
+	}
 
 	return (
 		<>
-			{<ItemList data={res} />}
+			<ItemList data={res} />
 			<select value={limit} onChange={handleLimitChange}>
-				<option value={10}>10</option>
-				<option value={20}>20</option>
-				<option value={30}>30</option>
+				<option value={10}>10개</option>
+				<option value={20}>20개</option>
+				<option value={30}>30개</option>
 			</select>
-			{/* Inside the return statement of MainPage component */};
-			{/* {res.map(item => (
-			<ItemList data={item} />
-		))} */}
-			<Pagination limit={limit} pages={10} />
+			{limit === 10 && (
+				<Pagination limit={limit} pages={10} onClick={handlePageClick} />
+			)}
+			{limit === 20 && (
+				<Pagination limit={limit} pages={10} onClick={handlePageClick} />
+			)}
+			{limit === 30 && (
+				<Pagination limit={limit} pages={8} onClick={handlePageClick} />
+			)}
 		</>
 	)
 }
+
 export default MainPage
 // import { useEffect, useState } from 'react'
 // import ItemList from './components/ItemList'
