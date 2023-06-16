@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 
 const Pagination = ({ pages }) => {
@@ -6,12 +7,16 @@ const Pagination = ({ pages }) => {
 	const { page: currentPage = '1' } = useParams()
 	const [searchParams, setSearchParams] = useSearchParams()
 	const limit = searchParams.get('limit') || 10
-	console.log('gggg', limit)
+	console.log('pagenationLimit', limit)
 	const sort = searchParams.get('sort') || 'updated_at'
 	const handlePageChange = page => {
 		navigate(`/page/${page}?sort=${sort}&limit=${limit}`)
 	}
 
+	const [currentPageGroup, setCurrentPageGroup] = useState(
+		Math.ceil(currentPage / 10),
+	)
+	console.log('currentPage', currentPage)
 	// const handleLimitChange = event => {
 	// 	const newLimit = parseInt(event.target.value, 10)
 	// 	if (page === undefined) {
@@ -20,18 +25,20 @@ const Pagination = ({ pages }) => {
 	// 	navigate(`/page/${page}?sort=${sort}&limit=${newLimit}`)
 	// }
 
-	const onPreviousPage = () => {
-		// 이전 페이지버튼
-		if (currentPage > 1) {
-			navigate(`/page/${parseInt(currentPage) - 1}`)
+	const onPreviousPageGroup = () => {
+		// 이전 그룹버튼
+		if (currentPageGroup === 1) {
+			return
 		}
+		return setCurrentPageGroup(currentPageGroup - 1)
 	}
+	console.log(currentPageGroup)
 
-	const onNextPage = () => {
-		if (currentPage < pages) {
-			// 다음 페이지 버튼
-			navigate(`/page/${parseInt(currentPage) + 1}`)
+	const onNextPageGroup = () => {
+		if (currentPageGroup === 2) {
+			return
 		}
+		return setCurrentPageGroup(currentPageGroup + 1)
 	}
 
 	const onMaxNext = () => {
@@ -42,14 +49,21 @@ const Pagination = ({ pages }) => {
 	}
 	return (
 		<div>
-			<button onClick={onPreviousPage}>{'<'}</button>
-			{pageNumbers.map(page => (
-				<button key={page} onClick={() => handlePageChange(page)}>
-					{page}
-				</button>
-			))}
-			<button onClick={onNextPage}>{'>'}</button>
-			<button onClick={onMaxNext}>{'>>'}</button>
+			<button onClick={onPreviousPageGroup}>{'<'}</button>
+			{pageNumbers.map((page, index) => {
+				let pageNumber
+				if (currentPageGroup === 1) {
+					pageNumber = index + 1
+				} else {
+					pageNumber = index + 11
+				}
+				return (
+					<button key={page} onClick={() => handlePageChange(pageNumber)}>
+						{pageNumber}
+					</button>
+				)
+			})}
+			<button onClick={onNextPageGroup}>{'>'}</button>
 		</div>
 	)
 }
