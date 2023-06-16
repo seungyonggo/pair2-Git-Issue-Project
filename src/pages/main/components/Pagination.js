@@ -7,11 +7,7 @@ const Pagination = ({ pages }) => {
 	const { page: currentPage = '1' } = useParams()
 	const [searchParams, setSearchParams] = useSearchParams()
 	const limit = searchParams.get('limit') || 10
-<<<<<<< Updated upstream
-	console.log('pagenationLimit', limit)
-=======
-	// console.log('gggg', limit)
->>>>>>> Stashed changes
+	// console.log('pagenationLimit', limit)
 	const sort = searchParams.get('sort') || 'updated_at'
 	const handlePageChange = page => {
 		navigate(`/page/${page}?sort=${sort}&limit=${limit}`)
