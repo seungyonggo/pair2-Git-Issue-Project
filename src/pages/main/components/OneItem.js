@@ -1,10 +1,17 @@
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 const OneItem = ({ data }) => {
 	const { number, title, updated_at, user, comments, created_at } = data
 	// console.log('oneitem', data)
+	const navigate = useNavigate()
+
+	const onClickDetail = () => {
+		navigate(`/pageDetail/${data.id}`)
+	}
+
 	return (
-		<S.Wrapper>
+		<S.Wrapper onClick={onClickDetail}>
 			<S.Number>넘버 : {'#' + number}</S.Number>
 			<S.Title>제목 : {title}</S.Title>
 			<S.User>유저 이름 : {user.login}</S.User>
