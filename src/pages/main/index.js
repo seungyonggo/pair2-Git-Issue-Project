@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getIssue } from '../../reducer/issue'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
@@ -7,7 +7,8 @@ import styled from 'styled-components'
 import Pagination from './components/Pagination'
 const MainPage = () => {
 	const dispatch = useDispatch()
-	const [isLoading, setIsLoading] = useState(true)
+	const loading = useSelector(state => state.issue.getIssueState.loading)
+	const issues = useSelector(state => state.issue.issue)
 	let { page } = useParams()
 	const [searchParams, setSearchParams] = useSearchParams()
 	const sort = searchParams.get('sort') || 'updated_at'
@@ -43,7 +44,7 @@ const MainPage = () => {
 
 	return (
 		<>
-			<ItemList data={res} />
+			{loading ? <S.Loader>로딩중~~~~~</S.Loader> : <ItemList data={issues} />}
 			<S.wrapper>
 				<S.optionWrapper>
 					<S.pageSelect onChange={handleSortChange}>
@@ -90,11 +91,20 @@ const optionWrapper = styled.div`
 const pageSelect = styled.select`
 	margin-right: 10px;
 `
+const Loader = styled.div`
+	display: flex;
+	justify-content: center;
+	color: white;
+	align-items: center;
+	height: 100vh;
+	font-size: 20px;
+`
 
 const S = {
 	wrapper,
 	optionWrapper,
 	pageSelect,
+	Loader,
 }
 // import { useEffect, useState } from 'react'
 // import ItemList from './components/ItemList'
