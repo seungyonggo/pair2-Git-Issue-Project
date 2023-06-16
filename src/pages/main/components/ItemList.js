@@ -2,7 +2,7 @@ import OneItem from './OneItem'
 import styled from 'styled-components'
 
 const ItemList = ({ data }) => {
-	console.log('itemList', data)
+	// console.log('itemList', data)
 
 	return (
 		<S.Wrapper>

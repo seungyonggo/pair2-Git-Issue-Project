@@ -15,7 +15,7 @@ const MainPage = () => {
 	const navigate = useNavigate()
 
 	const res = useSelector(state => state.issue.issue)
-	console.log('index Main', res)
+	// console.log('index Main', res)
 
 	const handleLimitChange = event => {
 		const newLimit = parseInt(event.target.value, 10)
@@ -49,7 +49,7 @@ const MainPage = () => {
 					<S.pageSelect onChange={handleSortChange}>
 						<option value="updated_at">업데이트순</option>
 						<option value="comments">댓글순</option>
-						<option value="created_at">최신순</option>
+						<option value="created_at">생성순</option>
 					</S.pageSelect>
 					<S.pageSelect value={limit} onChange={handleLimitChange}>
 						<option value={10}>10개</option>
