@@ -47,10 +47,10 @@ export const issueSlice = createSlice({
 //3.issue/getIssue/...
 export const getIssue = createAsyncThunk(
 	'issue/getIssue',
-	async ({ page, limit }) => {
+	async ({ page, limit, sort }) => {
 		console.log('issue', page, limit)
 		try {
-			const res = await mainApi.getApi(page, limit)
+			const res = await mainApi.getApi(page, limit, sort)
 			console.log('getApi', res.data)
 			console.log('res', res)
 			return res.data

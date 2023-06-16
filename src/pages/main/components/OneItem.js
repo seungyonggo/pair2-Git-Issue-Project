@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const OneItem = ({ data }) => {
-	const { number, title, updated_at, user } = data
+	const { number, title, updated_at, user, comments } = data
 	console.log('oneitem', data)
 	return (
 		<S.Wrapper>
@@ -9,6 +9,7 @@ const OneItem = ({ data }) => {
 			<S.Title>{title}</S.Title>
 			<S.UpdatedAt>{updated_at}</S.UpdatedAt>
 			<S.User>{user.login}</S.User>
+			<p>{comments}</p>
 		</S.Wrapper>
 	)
 }
