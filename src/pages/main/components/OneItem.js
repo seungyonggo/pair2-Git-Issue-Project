@@ -1,15 +1,16 @@
 import styled from 'styled-components'
 
 const OneItem = ({ data }) => {
-	const { number, title, updated_at, user, comments } = data
-	console.log('oneitem', data)
+	const { number, title, updated_at, user, comments, created_at } = data
+	// console.log('oneitem', data)
 	return (
 		<S.Wrapper>
-			<S.Number>{'#' + number}</S.Number>
-			<S.Title>{title}</S.Title>
-			<S.UpdatedAt>{updated_at}</S.UpdatedAt>
-			<S.User>{user.login}</S.User>
-			<p>{comments}</p>
+			<S.Number>넘버 : {'#' + number}</S.Number>
+			<S.Title>제목 : {title}</S.Title>
+			<S.User>유저 이름 : {user.login}</S.User>
+			<S.comments>댓글 수 : {comments}</S.comments>
+			<S.created_at>생성 날짜 : {created_at}</S.created_at>
+			<S.UpdatedAt>업데이트 날짜 : {updated_at}</S.UpdatedAt>
 		</S.Wrapper>
 	)
 }
@@ -34,6 +35,8 @@ const Number = styled.div``
 const Title = styled.div``
 const UpdatedAt = styled.div``
 const User = styled.div``
+const comments = styled.div``
+const created_at = styled.div``
 
 const S = {
 	Wrapper,
@@ -41,4 +44,6 @@ const S = {
 	Title,
 	UpdatedAt,
 	User,
+	comments,
+	created_at,
 }
