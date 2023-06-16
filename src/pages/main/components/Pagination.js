@@ -1,13 +1,24 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 
-const Pagination = ({ pages, limit }) => {
-	const pageNumbers = Array.from({ length: pages }, (_, i) => i + 1) // Example: for pages=5, [1, 2, 3, 4, 5]
+const Pagination = ({ pages }) => {
+	const pageNumbers = Array.from({ length: 10 }, (_, i) => i + 1) // Example: for pages=5, [1, 2, 3, 4, 5]
 	const navigate = useNavigate()
 	const { page: currentPage = '1' } = useParams()
-
+	const [searchParams, setSearchParams] = useSearchParams()
+	const limit = searchParams.get('limit') || 10
+	console.log('gggg', limit)
+	const sort = searchParams.get('sort') || 'updated_at'
 	const handlePageChange = page => {
-		navigate(`/page/${page}`)
+		navigate(`/page/${page}?sort=${sort}&limit=${limit}`)
 	}
+
+	// const handleLimitChange = event => {
+	// 	const newLimit = parseInt(event.target.value, 10)
+	// 	if (page === undefined) {
+	// 		return (page = 1)
+	// 	}
+	// 	navigate(`/page/${page}?sort=${sort}&limit=${newLimit}`)
+	// }
 
 	const onPreviousPage = () => {
 		// 이전 페이지버튼

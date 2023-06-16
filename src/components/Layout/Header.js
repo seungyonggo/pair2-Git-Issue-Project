@@ -16,7 +16,7 @@ export default Header
 
 const Wrapper = styled.div`
 	height: 100px;
-	width: 100vw;
+	width: 100%;
 	background-color: black;
 	border-bottom: 1px solid white;
 	display: flex;

@@ -1,35 +1,44 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getIssue } from '../../reducer/issue'
-import Pagination from './components/Pagination'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import ItemList from './components/ItemList'
 import styled from 'styled-components'
-
+import Pagination from './components/Pagination'
 const MainPage = () => {
 	const dispatch = useDispatch()
 	const [isLoading, setIsLoading] = useState(true)
-	const [limit, setLimit] = useState(10)
-	const { page } = useParams()
+	let { page } = useParams()
+	const [searchParams, setSearchParams] = useSearchParams()
+	const sort = searchParams.get('sort') || 'updated_at'
+	const limit = searchParams.get('limit') || 10
+	const navigate = useNavigate()
 
 	const res = useSelector(state => state.issue.issue)
 	console.log('index Main', res)
 
 	const handleLimitChange = event => {
 		const newLimit = parseInt(event.target.value, 10)
-		setLimit(newLimit)
+		if (page === undefined) {
+			return (page = 1)
+		}
+		navigate(`/page/${page}?sort=${sort}&limit=${newLimit}`)
 	}
 
 	useEffect(() => {
-		dispatch(getIssue({ page: page || 1, limit }))
-	}, [page, limit, dispatch])
-
-	const totalItems = res.length // Calculate the total number of items based on the length of 'res'
-	const totalPages = Math.ceil(totalItems / limit)
-	const visiblePages = totalPages > 1 ? Math.min(totalPages, 8) : 1
+		dispatch(getIssue({ page, sort, limit }))
+	}, [page, limit, dispatch, sort])
 
 	const handlePageClick = page => {
 		dispatch(getIssue({ page, limit }))
+	}
+
+	const handleSortChange = event => {
+		const newSort = event.target.value
+		if (page === undefined) {
+			return (page = 1)
+		}
+		navigate(`/page/${page}?sort=${newSort}&limit=${limit}`)
 	}
 
 	return (
@@ -37,20 +46,26 @@ const MainPage = () => {
 			<ItemList data={res} />
 			<S.wrapper>
 				<S.optionWrapper>
+					<S.pageSelect onChange={handleSortChange}>
+						<option value="updated_at">업데이트순</option>
+						<option value="comments">댓글순</option>
+						<option value="created_at">최신순</option>
+					</S.pageSelect>
 					<S.pageSelect value={limit} onChange={handleLimitChange}>
 						<option value={10}>10개</option>
 						<option value={20}>20개</option>
-						<option value={30}>30개</option>
+						<option value={50}>50개</option>
 					</S.pageSelect>
-					{limit === 10 && (
+					<Pagination />
+					{/* {limit === 10 && (
 						<Pagination limit={limit} pages={10} onClick={handlePageClick} />
 					)}
 					{limit === 20 && (
 						<Pagination limit={limit} pages={10} onClick={handlePageClick} />
 					)}
-					{limit === 30 && (
-						<Pagination limit={limit} pages={8} onClick={handlePageClick} />
-					)}
+					{limit === 50 && (
+						<Pagination limit={limit} pages={5} onClick={handlePageClick} />
+					)} */}
 				</S.optionWrapper>
 			</S.wrapper>
 		</>
