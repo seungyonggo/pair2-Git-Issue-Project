@@ -75,7 +75,7 @@
 ![로딩페이지](https://github.com/seungyonggo/JSdeepdive/assets/123628457/21013ba1-fe2d-44cf-8c50-d819aff17176)
 
 ### 페이지네이션 구현
-
+![페이지네이션 11~20포함](https://github.com/seungyonggo/js-code-festival/assets/123628457/aefc829a-55ce-4adc-9120-bb3ddb173eb3)
 
 ### 뒤로가기 구현
 
