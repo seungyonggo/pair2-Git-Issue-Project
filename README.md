@@ -25,11 +25,28 @@
   <tr>
     <td><a href="https://github.com/seungyonggo">❄️ 고승용</a></td>
     <td><a href="https://github.com/GrayHound0801">🦊 심재원</a></td>
+    <td><a href="https://github.com/ooherin">🐬 오혜린</td>
   </tr>
 </table>
 
 ## ❇️ 역할 분담
 
+- 1순위
+  레이아웃 디자인 / 혜린
+  api 가져오기 / 재원, 혜린
+  axios로 토큰가져오기 / 재원, 혜린
+  rtk로 getIssue함수 실행하기 / 승용, 혜린
+
+- 2순위
+  페이지네이션 / 재원
+  필터기능 / 승용
+  로딩페이지 / 승용
+  디테일페이지 / 재원
+  반응형 / 승용
+
+- 3순위
+  전역상태관리
+  
 ## ❇️ Main UI
 
 ## ❇️ 배포 링크 및 시연 영상
@@ -54,10 +71,25 @@
 -husky
 -styled-components
 
+사용 라이브러리
+- husky, prettier, eslint
+- rtk, redux-logger
+- axios
+- react-router-dom
+- styled-components
+
 ## ❇️ 문서화
 스프린트
+https://www.notion.so/3-github-issue-api-2-835d872ae612416dbf7e11d55fb070b1
 
 데일리 스크럼
+<table style="margin-left: auto; margin-right: auto; width: 600px; height: 200px;">
+  <tr>
+    <td><a href="https://equatorial-rhythm-d75.notion.site/c685ec6512e649b4a1bf9335e16c74e0">❄️ 고승용</a></td>
+    <td><a href="https://equatorial-rhythm-d75.notion.site/150ed2963c234b09a0bfe2750beb59d9">🦊 심재원</a></td>
+    <td><a href="[https://equatorial-rhythm-d75.notion.site/150ed2963c234b09a0bfe2750beb59d9">🐬 오혜린</a></td>
+  </tr>
+</table>
 
 ## ❇️ 회의 내용
 ### 6/13
