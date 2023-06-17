@@ -7,7 +7,6 @@ const Header = () => {
 				<S.Logo src="/image/logo.png" />
 				<S.Title src="/image/titleLogo.png" />
 			</S.LogoContainer>
-			<S.ButtonContainer>필터버튼 들어가는 곳</S.ButtonContainer>
 		</S.Wrapper>
 	)
 }
@@ -40,18 +39,8 @@ const LogoContainer = styled.div`
 	align-items: center;
 `
 
-const ButtonContainer = styled.div`
-	color: white;
-	width: 200px;
-	height: 80px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-`
-
 const S = {
 	Wrapper,
-	ButtonContainer,
 	LogoContainer,
 	Title,
 	Logo,

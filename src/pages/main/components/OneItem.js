@@ -24,13 +24,14 @@ const OneItem = ({ data }) => {
 export default OneItem
 
 const Wrapper = styled.div`
-	width: 750px;
+	width: 70%;
 	height: 200px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	border-radius: 20px;
 	border: 0.1rem solid #888;
 	padding: 20px;
+	overflow: hidden;
 	color: white;
 	font-size: 17px;
 	:hover {
