@@ -48,17 +48,34 @@
   전역상태관리
   
 ## ❇️ Main UI
+![MainPage](https://github.com/seungyonggo/JSdeepdive/assets/123628457/bbee559d-efb2-465c-872e-27d04f1859c2)
 
 ## ❇️ 배포 링크 및 시연 영상
 
 ### 필터 기능 구현
--gif
+- 업데이트 순
+![업데이트](https://github.com/seungyonggo/JSdeepdive/assets/123628457/b25721d2-d35c-49fa-9d32-81ac807b8c66)
+
+- 댓글 수
+![댓글순](https://github.com/seungyonggo/JSdeepdive/assets/123628457/eff309b7-456f-47af-84ae-75ed2381317d)
+
+- 생성 순
+![생성순](https://github.com/seungyonggo/JSdeepdive/assets/123628457/a85ed28b-6719-4d5f-844e-67e8c8d2dd3c)
+
+- 10개
+![10개](https://github.com/seungyonggo/JSdeepdive/assets/123628457/b3d1aedd-dee3-4ec2-85e0-6e64323eeaae)
+
+- 20개
+![20개](https://github.com/seungyonggo/JSdeepdive/assets/123628457/ad7551da-67fe-498d-8bca-962834f601a9)
+
+- 50개
+![50개](https://github.com/seungyonggo/JSdeepdive/assets/123628457/59964424-999d-44df-a218-d4541fabebbd)
 
 ### 로딩페이지 구현
--gif
+![로딩페이지](https://github.com/seungyonggo/JSdeepdive/assets/123628457/21013ba1-fe2d-44cf-8c50-d819aff17176)
 
 ### 페이지네이션 구현
--gif
+![페이지네이션](https://github.com/seungyonggo/JSdeepdive/assets/123628457/6b7a9c9e-af50-40af-acc5-16ddbbfa5bf0)
 
 ### 디테일페이지 구현
 -gif
