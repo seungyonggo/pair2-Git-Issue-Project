@@ -4,13 +4,19 @@
 
 ## ❇️ 프로젝트 소개
 
-😸 git.api를 가져와서 issue를 보여주고 필터 기능으로 업데이트, 댓글, 생성 순으로 10개, 20개, 50개의 issue 정렬한 게시판 프로젝트
+😸 issueItem, api, filter 기능 구현한 프로젝트
 
 ## ❇️ 프로젝트 개요
 
+😸 git.api를 가져와서 issue를 보여주고 필터 기능으로 업데이트, 댓글, 생성 순으로 10개, 20개, 50개의 issue 정렬한 게시판 프로젝트
+
 ## ❇️ 작업 기간
 
+#### 2023/06/13 ~ 2023/06/18
+
 ## ❇️ 와이어프레임
+![PC프레임](https://github.com/seungyonggo/JSdeepdive/assets/123628457/2b2ed27b-f0a9-4dd5-b314-5b099ddd6dde)
+
 
 ## ❇️ 진행 팀원 소개
 <table style="margin-left: auto; margin-right: auto; width: 600px; height: 200px;">
