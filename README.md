@@ -1,80 +1,59 @@
 💚 2조 git issue 프로젝트
 
-사용한 라이브러리
+### 1조 2페어의 GIT ISSUE 토이 프로젝트 레퍼지토리입니다.
+
+## ❇️ 프로젝트 소개
+
+😸 git.api를 가져와서 issue를 보여주고 필터 기능으로 업데이트, 댓글, 생성 순으로 10개, 20개, 50개의 issue 정렬한 게시판 프로젝트
+
+## ❇️ 프로젝트 개요
+
+## ❇️ 작업 기간
+
+## ❇️ 와이어프레임
+
+## ❇️ 진행 팀원 소개
+<table style="margin-left: auto; margin-right: auto; width: 600px; height: 200px;">
+  <tr>
+    <td><a href="https://github.com/seungyonggo">❄️ 고승용</a></td>
+    <td><a href="https://github.com/GrayHound0801">🦊 심재원</a></td>
+  </tr>
+</table>
+
+## ❇️ 역할 분담
+
+## ❇️ Main UI
+
+## ❇️ 배포 링크 및 시연 영상
+
+### 필터 기능 구현
+-gif
+
+### 로딩페이지 구현
+-gif
+
+### 페이지네이션 구현
+-gif
+
+### 디테일페이지 구현
+-gif
+
+## ❇️ 폴더 구조
+
+## ❇️ 사용한 기술 스택 및 라이브러리
 초기셋팅
 -eslint
 -husky
 -styled-components
 
-<<<<<<< HEAD
-## Available Scripts
+## ❇️ 문서화
+스프린트
 
-In the project directory, you can run:
+데일리 스크럼
 
-### `npm start`
+## ❇️ 회의 내용
+### 6/13
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 6/14
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-..
-=======
-진행 과정
-(6/13) 생성 및 셋팅, ui
->>>>>>> 96ccd3c4b1ce468dc2ad4f8ad96fddb05655f352
+### 6/15
