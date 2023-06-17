@@ -66,6 +66,7 @@
 ## ❇️ 폴더 구조
 
 ## ❇️ 사용한 기술 스택 및 라이브러리
+```
 초기셋팅
 -eslint
 -husky
@@ -77,10 +78,10 @@
 - axios
 - react-router-dom
 - styled-components
-
+```
 ## ❇️ 문서화
 스프린트
-(https://www.notion.so/3-github-issue-api-2-835d872ae612416dbf7e11d55fb070b1?pvs=4)
+<a href="https://www.notion.so/3-github-issue-api-2-835d872ae612416dbf7e11d55fb070b1?pvs=4">💚 Pair2 Notion</a>
 
 데일리 스크럼
 <table style="margin-left: auto; margin-right: auto; width: 600px; height: 200px;">
