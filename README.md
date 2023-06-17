@@ -81,7 +81,7 @@
 
 -페이지네이션 뒤로가기
 
-![페이지네이션 뒤로가기](https://github.com/seungyonggo/JSdeepdive/assets/123628457/4a2809f1-1adf-4714-8015-6a9ebb8f236a)
+![페이지네이션 11~20포함](https://github.com/seungyonggo/JSdeepdive/assets/123628457/64bc3787-5435-4373-bafd-073e39006e96)
 
 -필터 뒤로가기
 
