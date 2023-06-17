@@ -115,7 +115,7 @@
   <tr>
     <td><a href="https://equatorial-rhythm-d75.notion.site/c685ec6512e649b4a1bf9335e16c74e0">❄️ 고승용</a></td>
     <td><a href="https://equatorial-rhythm-d75.notion.site/150ed2963c234b09a0bfe2750beb59d9">🦊 심재원</a></td>
-    <td><a href="[https://equatorial-rhythm-d75.notion.site/150ed2963c234b09a0bfe2750beb59d9">🐬 오혜린</a></td>
+    <td><a href="https://www.notion.so/3ce9a38795ee42b0a229e32b63122d9b">🐬 오혜린</td>
   </tr>
 </table>
 
