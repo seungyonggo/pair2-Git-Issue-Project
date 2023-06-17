@@ -15,7 +15,9 @@
 #### 2023/06/13 ~ 2023/06/18
 
 ## ❇️ 와이어프레임
-![PC프레임](https://github.com/seungyonggo/JSdeepdive/assets/123628457/2b2ed27b-f0a9-4dd5-b314-5b099ddd6dde)
+![PC프레임](https://github.com/seungyonggo/JSdeepdive/assets/123628457/a602fc0b-a370-4e83-bf78-017297e578c2)
+![모바일프레임](https://github.com/seungyonggo/JSdeepdive/assets/123628457/57d9b4c3-dd4d-43dd-9eac-7e68d2db0863)
+
 
 
 ## ❇️ 진행 팀원 소개
