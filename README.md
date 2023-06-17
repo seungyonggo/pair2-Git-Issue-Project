@@ -80,7 +80,7 @@
 
 ## ❇️ 문서화
 스프린트
-[https://www.notion.so/3-github-issue-api-2-835d872ae612416dbf7e11d55fb070b1](https://www.notion.so/3-github-issue-api-2-835d872ae612416dbf7e11d55fb070b1?pvs=4)
+(https://www.notion.so/3-github-issue-api-2-835d872ae612416dbf7e11d55fb070b1?pvs=4)
 
 데일리 스크럼
 <table style="margin-left: auto; margin-right: auto; width: 600px; height: 200px;">
