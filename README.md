@@ -75,7 +75,17 @@
 ![로딩페이지](https://github.com/seungyonggo/JSdeepdive/assets/123628457/21013ba1-fe2d-44cf-8c50-d819aff17176)
 
 ### 페이지네이션 구현
-![페이지네이션](https://github.com/seungyonggo/JSdeepdive/assets/123628457/6b7a9c9e-af50-40af-acc5-16ddbbfa5bf0)
+![페이지네이션11~20](https://github.com/seungyonggo/JSdeepdive/assets/123628457/5f592c60-3700-43cb-8458-97bdf9b817f0)
+
+### 뒤로가기 구현
+
+-페이지네이션 뒤로가기
+
+![페이지네이션 뒤로가기](https://github.com/seungyonggo/JSdeepdive/assets/123628457/4a2809f1-1adf-4714-8015-6a9ebb8f236a)
+
+-필터 뒤로가기
+
+![필터 뒤로가기](https://github.com/seungyonggo/JSdeepdive/assets/123628457/776cc664-2a7d-466f-ab92-2c9bf117b883)
 
 ### 디테일페이지 구현
 -gif
@@ -111,7 +121,26 @@
 
 ## ❇️ 회의 내용
 ### 6/13
+  간단한 와이어 프레임 회의
+  husky, prettier, eslint 생성
+  Main UI, axios, rtk 생성
 
 ### 6/14
+  상준님이 나가셔서 혜린님 페어 1팀으로 이동
+  재원님이랑 승용님 같이 페이지네이션 개발 시작(살짝 멘붕)
 
 ### 6/15
+  필터를 승용님이 맡고 페이지네이션 재원님이 완성하기로함
+  필터로 issue갯수 구현 완료
+
+### 6/16
+  승용님이 필터 업데이트, 댓글, 생성순 기능 구현 완료
+  재원님이 페이지네이션 > 버튼 누르면 11~20번 페이지로 이동 가능
+
+### 6/17
+  승용님이 로딩페이지 구현 완료, mediaquery 기능 구현 완료
+  재원님이 디테일 페이지 구현 완료
+
+### 6/18
+  REDAME 작성 완료
+  전역상태관리
