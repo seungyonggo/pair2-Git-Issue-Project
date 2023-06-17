@@ -5,6 +5,7 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import ItemList from './components/ItemList'
 import styled from 'styled-components'
 import Pagination from './components/Pagination'
+
 const MainPage = () => {
 	const dispatch = useDispatch()
 	const loading = useSelector(state => state.issue.getIssueState.loading)
@@ -16,7 +17,6 @@ const MainPage = () => {
 	const navigate = useNavigate()
 
 	const res = useSelector(state => state.issue.issue)
-	// console.log('index Main', res)
 
 	const handleLimitChange = event => {
 		const newLimit = parseInt(event.target.value, 10)
@@ -30,10 +30,6 @@ const MainPage = () => {
 		dispatch(getIssue({ page, sort, limit }))
 	}, [page, limit, dispatch, sort])
 
-	const handlePageClick = page => {
-		dispatch(getIssue({ page, limit }))
-	}
-
 	const handleSortChange = event => {
 		const newSort = event.target.value
 		if (page === undefined) {
@@ -44,7 +40,11 @@ const MainPage = () => {
 
 	return (
 		<>
-			{loading ? <S.Loader>로딩중~~~~~</S.Loader> : <ItemList data={issues} />}
+			{loading ? (
+				<S.Loader>🖐로딩중~~~~~🖐</S.Loader>
+			) : (
+				<ItemList data={issues} />
+			)}
 			<S.wrapper>
 				<S.optionWrapper>
 					<S.pageSelect onChange={handleSortChange}>
@@ -58,15 +58,6 @@ const MainPage = () => {
 						<option value={50}>50개</option>
 					</S.pageSelect>
 					<Pagination />
-					{/* {limit === 10 && (
-						<Pagination limit={limit} pages={10} onClick={handlePageClick} />
-					)}
-					{limit === 20 && (
-						<Pagination limit={limit} pages={10} onClick={handlePageClick} />
-					)}
-					{limit === 50 && (
-						<Pagination limit={limit} pages={5} onClick={handlePageClick} />
-					)} */}
 				</S.optionWrapper>
 			</S.wrapper>
 		</>
@@ -77,19 +68,33 @@ export default MainPage
 
 const wrapper = styled.div`
 	display: flex;
-
 	width: 100%;
 	position: fixed;
 	justify-content: center;
 	bottom: 20px;
+
+	@media (max-width: 767px) {
+	}
 `
 
 const optionWrapper = styled.div`
 	display: flex;
+
+	@media (max-width: 767px) {
+		align-items: center;
+		display: flex;
+	}
 `
 
 const pageSelect = styled.select`
 	margin-right: 10px;
+
+	@media (max-width: 767px) {
+		width: 100px;
+	}
+	@media (max-width: 526px) {
+		width: 80px;
+	}
 `
 const Loader = styled.div`
 	display: flex;
@@ -106,40 +111,3 @@ const S = {
 	pageSelect,
 	Loader,
 }
-// import { useEffect, useState } from 'react'
-// import ItemList from './components/ItemList'
-// import { useDispatch, useSelector } from 'react-redux'
-// import { getIssue } from '../../reducer/issue'
-// import Pagination from '../../components/Pagination'
-// const MainPage = () => {
-// 	const dispatch = useDispatch()
-// 	const [isLoading, setIsLoading] = useState(true)
-// 	const [limit, setLimit] = useState(10)
-// 	const [page, setPage] = useState(1)
-// 	const [totalItems, setTotalItems] = useState(0)
-// 	const issue = useSelector(state => state.issue.issue)
-
-// 	useEffect(() => {
-// 		dispatch(getIssue(page, limit))
-// 			.then(response => {
-// 				setTotalItems(response.total || 0)
-// 				setIsLoading(false)
-// 			})
-// 			.catch(error => {
-// 				setIsLoading(false)
-// 			})
-// 	}, [page, limit])
-
-// 	return (
-// 		<>
-// 			{!isLoading && <ItemList data={issue} limit={limit} page={page} />}
-// 			<Pagination
-// 				total={totalItems}
-// 				limit={limit}
-// 				page={page}
-// 				setPage={setPage}
-// 			/>
-// 		</>
-// 	)
-// }
-// export default MainPage
