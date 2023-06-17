@@ -7,7 +7,7 @@ const OneItem = ({ data }) => {
 	const navigate = useNavigate()
 
 	const onClickDetail = () => {
-		navigate(`/pageDetail/${data.id}`)
+		navigate(`/pageDetail/${number}`)
 	}
 
 	return (

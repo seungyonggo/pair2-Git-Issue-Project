@@ -1,9 +1,15 @@
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 const Header = () => {
+	const navigate = useNavigate()
+	const MainNavigater = () => {
+		navigate('/')
+	}
+
 	return (
 		<S.Wrapper>
-			<S.LogoContainer>
+			<S.LogoContainer onClick={MainNavigater}>
 				<S.Logo src="/image/logo.png" />
 				<S.Title src="/image/titleLogo.png" />
 			</S.LogoContainer>
@@ -37,6 +43,7 @@ const LogoContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	cursor: pointer;
 `
 
 const S = {

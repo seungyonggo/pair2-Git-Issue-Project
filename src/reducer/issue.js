@@ -11,6 +11,11 @@ const initialState = {
 		done: false, //F T T
 		err: null, //F F 에러메세지
 	},
+	getIssueDetailState: {
+		loading: false,
+		done: false,
+		err: null,
+	},
 }
 
 //extraReducer를 사용해 getIssue가 실행되고, axios 상태에 따라
@@ -36,6 +41,24 @@ export const issueSlice = createSlice({
 			state.getIssueState.done = true
 			state.getIssueState.err = action.payload
 		})
+		//detail페이지 id값의 데이터를 받아옴
+		builder.addCase(getIssueDetail.pending, state => {
+			state.getIssueDetailState.loading = true
+			state.getIssueDetailState.done = false
+			state.getIssueDetailState.err = null
+		})
+		builder.addCase(getIssueDetail.fulfilled, (state, action) => {
+			state.issueDetail = action.payload
+			console.log('issuePayload', action.payload)
+			state.getIssueDetailState.loading = false
+			state.getIssueDetailState.done = true
+			state.getIssueDetailState.err = null
+		})
+		builder.addCase(getIssueDetail.rejected, (state, action) => {
+			state.getIssueDetailState.loading = false
+			state.getIssueDetailState.done = true
+			state.getIssueDetailState.err = action.payload
+		})
 	},
 })
 
@@ -53,6 +76,19 @@ export const getIssue = createAsyncThunk(
 			return res.data
 		} catch (err) {
 			console.log(err)
+			return err
+		}
+	},
+)
+
+export const getIssueDetail = createAsyncThunk(
+	'issue/getIssueDetail',
+	async number => {
+		try {
+			const res = await mainApi.getDetailApi(number)
+			return res.data
+		} catch (err) {
+			console.error(err)
 			return err
 		}
 	},
