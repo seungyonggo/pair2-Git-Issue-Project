@@ -9,6 +9,6 @@ export const store = configureStore({
 		if (process.env.NODE_ENV === 'development') {
 			return [...defaultMiddleware(), logger] //redux-logger
 		}
-		return defaultMiddleware
+		return defaultMiddleware()
 	},
 })
