@@ -28,7 +28,7 @@ const PageDetail = () => {
 			<Bar></Bar>
 			<UserWrapper>
 				<UserAvata src={user?.avatar_url} />
-				<UserId>{user.login}</UserId>
+				<UserId>{user?.login}</UserId>
 			</UserWrapper>
 		</Wrapper>
 	)
