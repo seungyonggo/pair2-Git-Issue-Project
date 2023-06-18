@@ -90,7 +90,35 @@
 ### 디테일페이지 구현
 ![디테일페이지](https://github.com/seungyonggo/JSdeepdive/assets/123628457/25e27bb1-a68e-4b29-88ef-54862e96f0b2)
 
+### 반응형 구현
+![미디어쿼리](https://github.com/seungyonggo/JSdeepdive/assets/123628457/bfd0e988-4441-4df0-b4ab-b1d367018c0b)
+
 ## ❇️ 폴더 구조
+```
+├─apis
+│  └─core.js
+│  └─MainApi.js
+├─components
+│  └─Layout
+│    └─Header.js
+│    └─index.js
+│    └─TopButton
+├─pages
+│  └─main
+│      └─components
+│        └─ItemList.js
+│        └─OneItem.js
+│        └─PageDetail.js
+│        └─Pagination.js
+│    └─index.js
+├─reducer
+│  └─index.js
+│  └─issue.js
+├─routes
+│  └─routing.js
+└─store
+│  └─Store.js
+```
 
 ## ❇️ 사용한 기술 스택 및 라이브러리
 ```
