@@ -8,4 +8,7 @@ export const mainApi = {
 			`/repos/angular/angular-cli/issues?page=${page}&per_page=${limit}&sort=${sort}`,
 		)
 	},
+	getDetailApi(number) {
+		return axiosInstance.get(`/repos/angular/angular-cli/issues/${number}`)
+	},
 }
