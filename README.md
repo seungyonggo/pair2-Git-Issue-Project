@@ -180,4 +180,5 @@ https://cosmic-salmiakki-9852fa.netlify.app/
 
 ### 6/18
   README 작성 완료<br>
-  전역상태관리
+  전역상태관리 <br>
+  배포하기 완료!
