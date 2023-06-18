@@ -88,7 +88,7 @@
 ![필터 뒤로가기](https://github.com/seungyonggo/JSdeepdive/assets/123628457/776cc664-2a7d-466f-ab92-2c9bf117b883)
 
 ### 디테일페이지 구현
--gif
+![디테일페이지](https://github.com/seungyonggo/JSdeepdive/assets/123628457/25e27bb1-a68e-4b29-88ef-54862e96f0b2)
 
 ## ❇️ 폴더 구조
 
