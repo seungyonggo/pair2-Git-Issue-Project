@@ -11,8 +11,12 @@
 😸 git.api를 가져와서 issue를 보여주고 필터 기능으로 업데이트, 댓글, 생성 순으로 10개, 20개, 50개의 issue 정렬한 게시판 프로젝트
 
 ## ❇️ 베포링크
-### vercel
+
+### Vercel
 https://pair2-git-issue-project-git-main-pair2.vercel.app/
+
+### Nettlify
+https://cosmic-salmiakki-9852fa.netlify.app/
 
 ## ❇️ 작업 기간
 
