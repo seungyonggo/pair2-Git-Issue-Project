@@ -27,7 +27,7 @@ const PageDetail = () => {
 			<ReactMarkdown>{body || ''}</ReactMarkdown>
 			<Bar></Bar>
 			<UserWrapper>
-				<UserAvata src={user?.avatar_url} />
+				<UserAvatar src={user?.avatar_url} />
 				<UserId>{user?.login}</UserId>
 			</UserWrapper>
 		</Wrapper>
@@ -38,7 +38,6 @@ export default PageDetail
 
 const Wrapper = styled.div`
 	background-color: #1a1a1a;
-	width: 100%;
 	height: 100%;
 	color: white;
 	padding-left: 30px;
@@ -57,7 +56,7 @@ const Created_at = styled.div`
 const Updated_at = styled.div`
 	margin-bottom: 150px;
 `
-const UserAvata = styled.img`
+const UserAvatar = styled.img`
 	width: 100px;
 	border-radius: 60px;
 	margin: 0 64px 0 64px;
